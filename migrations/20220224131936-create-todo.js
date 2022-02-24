@@ -17,9 +17,6 @@ module.exports = {
       deadline: {
         type: Sequelize.STRING,
       },
-      important: {
-        type: Sequelize.BOOLEAN,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -31,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Todos");
+    await queryInterface.dropTable("todos");
   },
 };
